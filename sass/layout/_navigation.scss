@@ -20,6 +20,17 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+
+    @include respond(tab-port){
+      top: 4rem;
+      right: 4rem;
+    }
+
+    
+    @include respond(phone){
+      top: 3.5rem;
+      right: 3.5rem;
+    }
   }
   &__background {
     width: 6rem;
@@ -42,6 +53,16 @@
     -moz-transition: all 0.5s cubic-bezier(0.83, 0, 0.17, 1);
     -ms-transition: all 0.5s cubic-bezier(0.83, 0, 0.17, 1);
     -o-transition: all 0.5s cubic-bezier(0.83, 0, 0.17, 1);
+
+    @include respond(tab-port){
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include respond(phone){
+      top: 3.5rem;
+      right: 3.5rem;
+    }
   }
   &__nav {
     height: 100vh;

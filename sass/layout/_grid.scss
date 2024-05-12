@@ -4,14 +4,29 @@
 
   @include clearfix;
 
+  @include respond(tab-port){
+    max-width: 51rem;
+    padding: 0 3rem;
+  }
   &:not(:last-child) {
     margin-bottom: $gutter-vertically;
+    @include respond(tab-port){
+      margin-bottom: $gutter-vertically-small;
+    }
   }
 
   [class^="col-"] {
     float: left;
     &:not(:last-child) {
       margin-right: $gutter-horizaontally;
+
+      @include respond(tab-port){
+        margin-right: 0;
+        margin-bottom: $gutter-vertically-small;
+      }
+    }
+    @include respond(tab-port){
+      width: 100% !important;
     }
   }
 
