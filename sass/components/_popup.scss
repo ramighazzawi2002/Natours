@@ -32,8 +32,8 @@
     &:visited {
       color: $color-grey-dark;
       position: absolute;
-      top: 2.5rem;
-      right: 2.5rem;
+      top: .3rem;
+      right: .3rem;
       font-size: 3rem;
       text-decoration: none;
       display: inline-block;
@@ -70,14 +70,30 @@
     -moz-transition: all 0.5s 0.2s;
     -ms-transition: all 0.5s 0.2s;
     -o-transition: all 0.5s 0.2s;
+
+    @include respond(tab-port){
+      flex-direction: column;
+      padding: 2rem
+    }
   }
 
   &__left {
-    width: 33.33%;
+    width:33.333%;
+    text-align: center;
+     @include respond(tab-port){
+      width: 100%;
+    }
   }
   &__right {
     width: 66.66%;
     padding: 3rem 5rem;
+    @include respond(tab-port){
+      width: 100%;
+    }
+
+    @include respond(phone){
+      padding: 0;
+    }
   }
   &__text {
     font-size: 1.4rem;
@@ -89,9 +105,17 @@
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     -ms-hyphens: auto;
+    @include respond(tab-port){
+      column-count: auto;
+    }
   }
   &__img {
     display: block;
     width: 100%;
+    @include respond(tab-port){
+      display: inline-block;
+      margin-left: 2rem;
+      width: 43%;
+    }
   }
 }
